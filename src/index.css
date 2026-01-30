@@ -1,0 +1,126 @@
+/* ===== CSS Variables (Wovyn Design System) ===== */
+:root {
+    /* Colors */
+    --background: #FAFAF9;
+    --surface: #FFFFFF;
+    --primary-text: #292524;
+    --secondary-text: #A8A29E;
+    --tertiary-text: #D6D3D1;
+    --accent-amber: #D97706;
+    --accent-rose: #FB7185;
+    --accent-emerald: #34D399;
+    --stone-accent: #78716C;
+    --stone-200: #E7E5E4;
+    --stone-100: #F5F5F4;
+
+    /* Status Colors */
+    --status-urgent: #FB7185;
+    --status-warning: #FBBF24;
+    --status-good: #34D399;
+    --status-neutral: #E7E5E4;
+
+    /* Typography */
+    --font-serif: 'Crimson Pro', Georgia, 'Times New Roman', serif;
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+    /* Spacing */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+    --space-2xl: 4rem;
+    --space-3xl: 6rem;
+
+    /* Border Radius */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== Reset & Base ===== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--background);
+    color: var(--primary-text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ===== Typography ===== */
+h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+/* ===== Utility Classes ===== */
+.title-large {
+    font-size: 3rem;
+    letter-spacing: -0.02em;
+}
+
+.title-medium {
+    font-size: 2rem;
+    letter-spacing: -0.01em;
+}
+
+.title-small {
+    font-size: 1.5rem;
+}
+
+.body-text {
+    font-size: 1.125rem;
+    color: var(--secondary-text);
+}
+
+.caption {
+    font-size: 0.875rem;
+    color: var(--secondary-text);
+    letter-spacing: 0.02em;
+}
+
+.label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--stone-accent);
+}
+
+.section {
+    padding: var(--space-3xl) 0;
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: var(--space-2xl) 0;
+    }
+}

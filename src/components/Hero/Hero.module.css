@@ -1,0 +1,88 @@
+.hero {
+    padding-top: calc(72px + var(--space-3xl));
+    padding-bottom: var(--space-3xl);
+    text-align: center;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.heroContent {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.heroTagline {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: var(--stone-100);
+    border-radius: var(--radius-xl);
+    font-size: 0.875rem;
+    color: var(--stone-accent);
+    margin-bottom: var(--space-md);
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: var(--space-md);
+}
+
+.hero h1 em {
+    font-style: italic;
+    color: var(--accent-amber);
+}
+
+.heroDescription {
+    font-size: 1.25rem;
+    color: var(--secondary-text);
+    max-width: 600px;
+    margin: 0 auto var(--space-xl);
+}
+
+.heroCtas {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+}
+
+.appStoreLink {
+    display: inline-block;
+}
+
+.appStoreBadge {
+    height: 52px;
+    transition: transform 0.2s ease;
+}
+
+.heroVisual {
+    margin-top: var(--space-2xl);
+    position: relative;
+}
+
+.phoneMockup {
+    max-width: 320px;
+    margin: 0 auto;
+    border-radius: 40px;
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+    background: var(--surface);
+}
+
+.phoneMockup img {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .heroCtas {
+        flex-direction: column;
+        align-items: center;
+    }
+}

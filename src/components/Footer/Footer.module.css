@@ -1,0 +1,118 @@
+.footer {
+    background: var(--background);
+    padding: var(--space-2xl) 0;
+    border-top: 1px solid var(--stone-200);
+}
+
+.footerContent {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: var(--space-xl);
+}
+
+.footerBrand .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-serif);
+    font-size: 1.75rem;
+    font-weight: 500;
+    font-style: italic;
+    margin-bottom: var(--space-sm);
+}
+
+.logoIcon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+}
+
+.footerBrand p {
+    color: var(--secondary-text);
+    font-size: 0.9375rem;
+    max-width: 300px;
+}
+
+.footerLinks h4 {
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.footerLinks ul {
+    list-style: none;
+}
+
+.footerLinks li {
+    margin-bottom: var(--space-xs);
+}
+
+.footerLinks a {
+    color: var(--secondary-text);
+    font-size: 0.9375rem;
+    transition: color 0.2s ease;
+}
+
+.footerLinks a:hover {
+    color: var(--primary-text);
+}
+
+.footerBottom {
+    margin-top: var(--space-xl);
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--stone-200);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.875rem;
+    color: var(--secondary-text);
+}
+
+.socialLinks {
+    display: flex;
+    gap: var(--space-sm);
+}
+
+.socialLinks a {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--stone-100);
+    border-radius: 50%;
+    transition: background 0.2s ease;
+}
+
+.socialLinks a:hover {
+    background: var(--stone-200);
+}
+
+@media (max-width: 968px) {
+    .footerContent {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .footerContent {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footerBrand .logo {
+        justify-content: center;
+    }
+
+    .footerBrand p {
+        max-width: 100%;
+    }
+
+    .footerBottom {
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+}

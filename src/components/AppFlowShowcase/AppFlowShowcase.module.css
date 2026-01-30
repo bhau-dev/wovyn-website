@@ -1,0 +1,188 @@
+.appFlow {
+    background: var(--primary-text);
+    color: var(--surface);
+    overflow: hidden;
+    padding: var(--space-3xl) 0;
+}
+
+.appFlowHeader {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto var(--space-3xl);
+}
+
+.appFlowHeader .label {
+    color: var(--accent-amber);
+    margin-bottom: var(--space-sm);
+}
+
+.appFlowHeader h2 {
+    color: var(--surface);
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: var(--space-md);
+}
+
+.appFlowHeader p {
+    color: var(--tertiary-text);
+    font-size: 1.125rem;
+}
+
+.flowShowcase {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 620px;
+    padding: 0 var(--space-md);
+    perspective: 1500px;
+}
+
+.flowPhones {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 520px;
+}
+
+.flowPhone {
+    position: absolute;
+    width: 220px;
+    cursor: pointer;
+    transition: filter 0.4s ease;
+}
+
+.phoneInner {
+    border-radius: 32px;
+    overflow: hidden;
+    background: #000;
+    transition: box-shadow 0.4s ease;
+}
+
+.phoneInner img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Label above the phone */
+.phoneLabel {
+    position: absolute;
+    top: -45px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.phoneLabel span {
+    background: var(--accent-amber);
+    color: var(--primary-text);
+    padding: 0.5rem 1.25rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    white-space: nowrap;
+    box-shadow: 0 4px 20px rgba(217, 119, 6, 0.4);
+}
+
+/* Glow effect behind the phone */
+.phoneGlow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(
+        ellipse at center,
+        rgba(217, 119, 6, 0.2) 0%,
+        rgba(217, 119, 6, 0.1) 30%,
+        transparent 70%
+    );
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Step indicators */
+.stepIndicators {
+    display: flex;
+    gap: 12px;
+    margin-top: var(--space-xl);
+}
+
+.stepDot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.stepDot:hover {
+    transform: scale(1.2);
+}
+
+.flowCaption {
+    text-align: center;
+    margin-top: var(--space-lg);
+    color: var(--tertiary-text);
+    font-size: 0.9375rem;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .flowPhone {
+        width: 180px;
+    }
+
+    .flowShowcase {
+        min-height: 520px;
+    }
+
+    .flowPhones {
+        height: 450px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .flowPhone {
+        width: 200px;
+    }
+
+    .flowShowcase {
+        min-height: 480px;
+    }
+
+    .flowPhones {
+        height: 400px;
+    }
+
+    .appFlowHeader h2 {
+        font-size: 1.75rem;
+    }
+
+    .phoneLabel {
+        top: -38px;
+    }
+
+    .phoneLabel span {
+        font-size: 0.75rem;
+        padding: 0.4rem 1rem;
+    }
+}
+
+/* Small mobile - show only active phone */
+@media (max-width: 640px) {
+    .flowPhone {
+        width: 240px;
+    }
+
+    .flowPhones {
+        height: 450px;
+    }
+}

@@ -1,0 +1,44 @@
+.howItWorks {
+    background: var(--background);
+}
+
+.howItWorksHeader {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto var(--space-2xl);
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-xl);
+}
+
+.step {
+    text-align: center;
+}
+
+.stepNumber {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    margin: 0 auto var(--space-md);
+    background: var(--surface);
+    border: 2px solid var(--stone-200);
+    border-radius: 50%;
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    color: var(--stone-accent);
+}
+
+.step h3 {
+    margin-bottom: var(--space-xs);
+    font-size: 1.25rem;
+}
+
+.step p {
+    color: var(--secondary-text);
+    font-size: 0.9375rem;
+}

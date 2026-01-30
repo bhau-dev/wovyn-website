@@ -1,0 +1,136 @@
+.tapestryShowcase {
+    background: linear-gradient(180deg, var(--surface) 0%, var(--background) 100%);
+}
+
+.tapestryContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-2xl);
+    align-items: center;
+}
+
+.tapestryText h2 {
+    margin-bottom: var(--space-md);
+}
+
+.tapestryText p {
+    color: var(--secondary-text);
+    margin-bottom: var(--space-md);
+}
+
+.statusLegend {
+    display: flex;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+}
+
+.statusItem {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    font-size: 0.875rem;
+}
+
+.statusDot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.statusDot.urgent { background: var(--status-urgent); }
+.statusDot.warning { background: var(--status-warning); }
+.statusDot.good { background: var(--status-good); }
+.statusDot.neutral { background: var(--status-neutral); }
+
+.tapestryVisual {
+    display: flex;
+    justify-content: center;
+}
+
+.tapestryIllustration {
+    position: relative;
+    width: 360px;
+    height: 360px;
+}
+
+.orbit {
+    position: absolute;
+    border: 1px dashed var(--stone-200);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.orbit1 { width: 130px; height: 130px; }
+.orbit2 { width: 210px; height: 210px; }
+.orbit3 { width: 290px; height: 290px; }
+
+.centerNode {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border: 3px solid var(--accent-amber);
+    z-index: 10;
+}
+
+.centerNode img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.orbitContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.friendNode {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    border: 2px solid var(--surface);
+}
+
+.friendNode img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Position 5 friend nodes on orbit circles */
+.friendNode:nth-child(1) { top: 5%; left: 44%; }
+.friendNode:nth-child(2) { top: 32%; left: 73%; }
+.friendNode:nth-child(3) { top: 70%; left: 68%; }
+.friendNode:nth-child(4) { top: 73%; left: 22%; }
+.friendNode:nth-child(5) { top: 32%; left: 18%; }
+
+@media (max-width: 968px) {
+    .tapestryContent {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .statusLegend {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .tapestryIllustration {
+        width: 300px;
+        height: 300px;
+    }
+}

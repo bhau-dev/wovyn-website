@@ -1,0 +1,81 @@
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: calc(72px + 3rem) 1.5rem 4rem;
+}
+
+.pageTitle {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.effectiveDate {
+    font-size: 0.9375rem;
+    color: var(--secondary-text);
+    margin-bottom: 3rem;
+}
+
+.policyContent h2 {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-text);
+}
+
+.policyContent p {
+    margin-bottom: 1rem;
+    color: var(--primary-text);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.policyContent ul {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+}
+
+.policyContent li {
+    margin-bottom: 0.5rem;
+    color: var(--primary-text);
+    line-height: 1.7;
+}
+
+.policyContent a {
+    color: var(--accent-amber);
+    text-decoration: none;
+}
+
+.policyContent a:hover {
+    text-decoration: underline;
+}
+
+.contactEmail {
+    font-weight: 500;
+}
+
+.footer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    border-top: 1px solid var(--stone-200);
+    text-align: center;
+}
+
+.footer p {
+    font-size: 0.875rem;
+    color: var(--secondary-text);
+}
+
+@media (max-width: 600px) {
+    .pageTitle {
+        font-size: 2rem;
+    }
+
+    .policyContent h2 {
+        font-size: 1.25rem;
+    }
+}
