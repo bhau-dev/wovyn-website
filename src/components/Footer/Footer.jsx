@@ -46,7 +46,7 @@ function Footer() {
           </div>
         </div>
         <div className={styles.footerBottom}>
-          <p>&copy; 2025 Wovyn. All rights reserved.</p>
+          <p>Copyright &copy; 2026 Bhaumik Uttam Jain</p>
           <div className={styles.socialLinks}>
             <a href="#" aria-label="Twitter">𝕏</a>
             <a href="#" aria-label="Instagram">📷</a>

@@ -93,7 +93,7 @@ function PrivacyPolicy() {
       </main>
 
       <footer className={styles.footer}>
-        <p>&copy; 2025 Wovyn. All rights reserved.</p>
+        <p>Copyright &copy; 2026 Bhaumik Uttam Jain</p>
       </footer>
     </motion.div>
   )
