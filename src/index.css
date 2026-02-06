@@ -124,3 +124,21 @@ h1, h2, h3, h4 {
         padding: var(--space-2xl) 0;
     }
 }
+
+@media (max-width: 480px) {
+    .title-large {
+        font-size: 2rem;
+    }
+
+    .title-medium {
+        font-size: 1.5rem;
+    }
+
+    .title-small {
+        font-size: 1.25rem;
+    }
+
+    .section {
+        padding: var(--space-xl) 0;
+    }
+}

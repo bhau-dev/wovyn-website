@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Container from '../ui/Container'
 import styles from './AppFlowShowcase.module.css'
@@ -11,13 +11,43 @@ const phones = [
   { src: '/assets/Import - Success.png', alt: 'Welcome to your Tapestry', label: 'Start Weaving' }
 ]
 
+function useIsMobile(breakpoint = 640) {
+  const [isMobile, setIsMobile] = useState(false)
+  useEffect(() => {
+    const mq = window.matchMedia(`(max-width: ${breakpoint}px)`)
+    setIsMobile(mq.matches)
+    const handler = (e) => setIsMobile(e.matches)
+    mq.addEventListener('change', handler)
+    return () => mq.removeEventListener('change', handler)
+  }, [breakpoint])
+  return isMobile
+}
+
 function AppFlowShowcase() {
   const [hoveredIndex, setHoveredIndex] = useState(null)
   const [selectedIndex, setSelectedIndex] = useState(2) // Center phone by default
+  const touchStartX = useRef(null)
+  const isMobile = useIsMobile()
 
   const handlePhoneClick = (index) => {
     setSelectedIndex(index)
   }
+
+  const handleTouchStart = useCallback((e) => {
+    touchStartX.current = e.touches[0].clientX
+  }, [])
+
+  const handleTouchEnd = useCallback((e) => {
+    if (touchStartX.current === null) return
+    const deltaX = e.changedTouches[0].clientX - touchStartX.current
+    const SWIPE_THRESHOLD = 50
+    if (deltaX < -SWIPE_THRESHOLD) {
+      setSelectedIndex((prev) => Math.min(prev + 1, phones.length - 1))
+    } else if (deltaX > SWIPE_THRESHOLD) {
+      setSelectedIndex((prev) => Math.max(prev - 1, 0))
+    }
+    touchStartX.current = null
+  }, [])
 
   return (
     <section className={styles.appFlow} id="app-flow">
@@ -42,24 +72,35 @@ function AppFlowShowcase() {
         viewport={{ once: true, margin: '-50px' }}
         transition={{ duration: 0.8 }}
       >
-        <div className={styles.flowPhones}>
+        <div
+          className={styles.flowPhones}
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+        >
           {phones.map((phone, index) => {
             const isHovered = hoveredIndex === index
             const isSelected = selectedIndex === index
-            const isActive = isHovered || (hoveredIndex === null && isSelected)
+            const isActive = isMobile
+              ? isSelected
+              : isHovered || (hoveredIndex === null && isSelected)
             const hasHover = hoveredIndex !== null
 
-            // Calculate position offset from center
-            const centerIndex = 2
+            // Calculate position offset — on mobile, offset from selected phone
+            const centerIndex = isMobile ? selectedIndex : 2
             const offset = index - centerIndex
-            const baseX = offset * 180
+            const baseX = isMobile ? offset * 260 : offset * 180
+
+            // On mobile, fully hide non-active phones
+            const mobileOpacity = isMobile
+              ? (isSelected ? 1 : 0)
+              : (hasHover && !isHovered ? 0.4 : 1)
 
             return (
               <motion.div
                 key={index}
                 className={styles.flowPhone}
-                onMouseEnter={() => setHoveredIndex(index)}
-                onMouseLeave={() => setHoveredIndex(null)}
+                onMouseEnter={() => !isMobile && setHoveredIndex(index)}
+                onMouseLeave={() => !isMobile && setHoveredIndex(null)}
                 onClick={() => handlePhoneClick(index)}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -69,10 +110,10 @@ function AppFlowShowcase() {
                   x: baseX,
                   scale: isActive ? 1.15 : hasHover ? 0.85 : 1,
                   y: isActive ? -30 : 0,
-                  rotateY: isActive ? 0 : offset * 5,
+                  rotateY: isMobile ? 0 : (isActive ? 0 : offset * 5),
                   zIndex: isActive ? 20 : 10 - Math.abs(offset),
-                  opacity: hasHover && !isHovered ? 0.4 : 1,
-                  filter: hasHover && !isHovered ? 'brightness(0.6) blur(1px)' : 'brightness(1) blur(0px)',
+                  opacity: mobileOpacity,
+                  filter: hasHover && !isHovered && !isMobile ? 'brightness(0.6) blur(1px)' : 'brightness(1) blur(0px)',
                 }}
                 style={{
                   transformStyle: 'preserve-3d',
@@ -135,6 +176,10 @@ function AppFlowShowcase() {
             />
           ))}
         </div>
+
+        {isMobile && (
+          <p className={styles.swipeHint}>Swipe to explore</p>
+        )}
       </motion.div>
 
       <Container>

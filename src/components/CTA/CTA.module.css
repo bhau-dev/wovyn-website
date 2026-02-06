@@ -20,3 +20,9 @@
 .ctaButton {
     display: inline-flex;
 }
+
+@media (max-width: 480px) {
+    .ctaSection h2 {
+        font-size: 1.75rem;
+    }
+}

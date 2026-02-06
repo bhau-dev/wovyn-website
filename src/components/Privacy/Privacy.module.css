@@ -67,3 +67,11 @@
         text-align: left;
     }
 }
+
+@media (max-width: 480px) {
+    .privacyIconLarge {
+        width: 140px;
+        height: 140px;
+        font-size: 3.5rem;
+    }
+}

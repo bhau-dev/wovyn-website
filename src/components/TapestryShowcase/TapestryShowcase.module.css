@@ -134,3 +134,14 @@
         height: 300px;
     }
 }
+
+@media (max-width: 480px) {
+    .tapestryIllustration {
+        width: 260px;
+        height: 260px;
+    }
+
+    .orbit1 { width: 110px; height: 110px; }
+    .orbit2 { width: 180px; height: 180px; }
+    .orbit3 { width: 250px; height: 250px; }
+}

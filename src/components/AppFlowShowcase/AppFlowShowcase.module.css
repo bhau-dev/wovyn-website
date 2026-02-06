@@ -182,7 +182,28 @@
         width: 240px;
     }
 
+    .flowShowcase {
+        min-height: 420px;
+        touch-action: pan-y;
+    }
+
     .flowPhones {
-        height: 450px;
+        height: 400px;
+        overflow: hidden;
+    }
+
+    .swipeHint {
+        display: block;
+        color: var(--tertiary-text);
+        font-size: 0.8125rem;
+        text-align: center;
+        margin-top: var(--space-sm);
+        opacity: 0.7;
+    }
+}
+
+@media (min-width: 641px) {
+    .swipeHint {
+        display: none;
     }
 }
