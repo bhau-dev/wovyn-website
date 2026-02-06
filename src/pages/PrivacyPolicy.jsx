@@ -149,7 +149,7 @@ function PrivacyPolicy() {
           <ul>
             <li><strong>Delete Your Account:</strong> Use the "Delete Account" option in Settings to permanently delete all your data</li>
             <li><strong>Withdraw AI Consent:</strong> Disable AI features in Settings to stop sharing data with Google</li>
-            <li><strong>Data Request:</strong> Contact us at <a href="mailto:privacy@wovyn.app" className={styles.contactEmail}>privacy@wovyn.app</a> for data access or portability requests</li>
+            <li><strong>Data Request:</strong> Contact us at <a href="mailto:wovynapp@gmail.com" className={styles.contactEmail}>wovynapp@gmail.com</a> for data access or portability requests</li>
           </ul>
 
           <h2>Children's Privacy</h2>
@@ -169,7 +169,7 @@ function PrivacyPolicy() {
 
           <h2>Contact Us</h2>
           <p>If you have questions about this Privacy Policy or our privacy practices, contact us at:</p>
-          <p><strong>Email:</strong> <a href="mailto:privacy@wovyn.app" className={styles.contactEmail}>privacy@wovyn.app</a><br />
+          <p><strong>Email:</strong> <a href="mailto:wovynapp@gmail.com" className={styles.contactEmail}>wovynapp@gmail.com</a><br />
           <strong>App Support:</strong> Use the "Contact Support" option in Settings</p>
 
           <h2>Consent Record</h2>
