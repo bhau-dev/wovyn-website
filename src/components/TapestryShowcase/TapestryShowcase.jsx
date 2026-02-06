@@ -3,11 +3,11 @@ import Container from '../ui/Container'
 import styles from './TapestryShowcase.module.css'
 
 const friendNodes = [
-  { src: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face', alt: 'Friend' },
-  { src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face', alt: 'Friend' },
-  { src: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face', alt: 'Friend' },
-  { src: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face', alt: 'Friend' },
-  { src: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=face', alt: 'Friend' }
+  { src: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face', alt: 'Friend', status: 'good' },
+  { src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face', alt: 'Friend', status: 'warning' },
+  { src: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face', alt: 'Friend', status: 'urgent' },
+  { src: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face', alt: 'Friend', status: 'good' },
+  { src: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=face', alt: 'Friend', status: 'warning' }
 ]
 
 function TapestryShowcase() {
@@ -90,16 +90,24 @@ function TapestryShowcase() {
                 variants={orbitVariants}
                 animate="animate"
               >
-                {friendNodes.map((friend, index) => (
-                  <motion.div
-                    key={index}
-                    className={styles.friendNode}
-                    variants={counterOrbitVariants}
-                    animate="animate"
-                  >
-                    <img src={friend.src} alt={friend.alt} loading="lazy" />
-                  </motion.div>
-                ))}
+                {friendNodes.map((friend, index) => {
+                  const statusClass = {
+                    good: styles.statusGood,
+                    warning: styles.statusWarning,
+                    urgent: styles.statusUrgent,
+                    neutral: styles.statusNeutral,
+                  }[friend.status] || ''
+                  return (
+                    <motion.div
+                      key={index}
+                      className={`${styles.friendNode} ${statusClass}`}
+                      variants={counterOrbitVariants}
+                      animate="animate"
+                    >
+                      <img src={friend.src} alt={friend.alt} loading="lazy" />
+                    </motion.div>
+                  )
+                })}
               </motion.div>
             </div>
           </motion.div>

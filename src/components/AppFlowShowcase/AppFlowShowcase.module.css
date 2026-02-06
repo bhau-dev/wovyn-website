@@ -179,17 +179,16 @@
 /* Small mobile - show only active phone */
 @media (max-width: 640px) {
     .flowPhone {
-        width: 240px;
+        width: 220px;
     }
 
     .flowShowcase {
-        min-height: 420px;
+        min-height: 480px;
         touch-action: pan-y;
     }
 
     .flowPhones {
-        height: 400px;
-        overflow: hidden;
+        height: 460px;
     }
 
     .swipeHint {

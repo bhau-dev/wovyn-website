@@ -108,8 +108,8 @@ function AppFlowShowcase() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 animate={{
                   x: baseX,
-                  scale: isActive ? 1.15 : hasHover ? 0.85 : 1,
-                  y: isActive ? -30 : 0,
+                  scale: isActive ? (isMobile ? 1.05 : 1.15) : hasHover ? 0.85 : 1,
+                  y: isActive ? (isMobile ? -10 : -30) : 0,
                   rotateY: isMobile ? 0 : (isActive ? 0 : offset * 5),
                   zIndex: isActive ? 20 : 10 - Math.abs(offset),
                   opacity: mobileOpacity,
