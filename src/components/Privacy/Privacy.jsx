@@ -24,14 +24,15 @@ function Privacy() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <p className="label">Privacy First</p>
-            <h2 className="title-medium">Your data stays on your device</h2>
+            <h2 className="title-medium">Your privacy, your control</h2>
             <p>
-              We believe your relationships are personal. That's why Wovyn is built with a local-first architecture — your data never leaves your device.
+              We believe your relationships are personal. Wovyn is built with privacy at its core — your data syncs securely through iCloud, AI features require explicit consent, and you can delete your account and all data at any time.
             </p>
             <ul className={styles.privacyPoints}>
-              <li>All data stored locally on your iPhone</li>
-              <li>No cloud sync required</li>
-              <li>You're in complete control</li>
+              <li>Data syncs securely via iCloud — Apple's end-to-end encryption</li>
+              <li>AI suggestions require your explicit opt-in consent</li>
+              <li>Delete your account and all data anytime in Settings</li>
+              <li>No ads, no data selling, no social graph mining</li>
             </ul>
           </motion.div>
         </div>
