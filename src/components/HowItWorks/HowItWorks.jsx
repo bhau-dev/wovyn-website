@@ -7,19 +7,19 @@ import styles from './HowItWorks.module.css'
 const steps = [
   {
     title: 'Add Your People',
-    description: 'Import contacts or add friends manually. Start with your closest circle — quality over quantity.'
+    description: 'Import contacts or add friends manually. Enrich each connection with how you met, vibes, and relationship type.'
   },
   {
     title: 'Set Your Rhythm',
-    description: 'Choose how often you want to connect with each friend. Daily check-ins or quarterly catch-ups — you decide.'
+    description: 'Choose how often you want to connect — daily check-ins or quarterly catch-ups. Pick Quiet, Balanced, or Active notification modes.'
   },
   {
-    title: 'Log Interactions',
-    description: 'Had coffee? Quick call? A simple tap logs your interaction and resets the connection timer.'
+    title: 'Log & Remember',
+    description: 'Had coffee? Quick call? Log activities from 42 curated options or create your own. Capture memories in Knots.'
   },
   {
     title: 'Stay Connected',
-    description: 'Get gentle reminders before relationships drift. Wovyn keeps you on track without the guilt trips.'
+    description: 'Get smart reminders before friendships drift. Use AI-powered message suggestions when you\'re not sure what to say.'
   }
 ]
 
