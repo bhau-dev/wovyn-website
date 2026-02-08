@@ -1,0 +1,622 @@
+/* Wovyn Friend Profile Mockups - Matches iOS App Design */
+
+.wovyn-mockups-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 48px 24px;
+  background: #FAFAF9;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.wovyn-mockups-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.wovyn-mockups-header h1 {
+  font-family: 'Times New Roman', Georgia, serif;
+  font-size: 2.5rem;
+  color: #292524;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.wovyn-mockups-header p {
+  font-size: 1.125rem;
+  color: #A8A29E;
+}
+
+/* Grid Layout */
+.wovyn-mockups-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 32px;
+  margin-bottom: 64px;
+}
+
+/* Mockup Card Container */
+.wovyn-mockup-card {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.wovyn-mockup-label {
+  margin-bottom: 24px;
+}
+
+.wovyn-mockup-label h2 {
+  font-family: 'Times New Roman', Georgia, serif;
+  font-size: 1.5rem;
+  color: #292524;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.wovyn-mockup-label > p {
+  font-size: 0.875rem;
+  color: #A8A29E;
+  margin-bottom: 16px;
+}
+
+.wovyn-label-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 16px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+.wovyn-label-badge.recommended {
+  background: #FEF3C7;
+  color: #92400E;
+}
+
+/* Pros and Cons */
+.pros-cons {
+  margin-top: 16px;
+  padding: 16px;
+  background: #FAFAF9;
+  border-radius: 12px;
+  font-size: 0.875rem;
+}
+
+.pros, .cons {
+  margin-bottom: 12px;
+}
+
+.pros strong {
+  color: #059669;
+}
+
+.cons strong {
+  color: #DC2626;
+}
+
+.pros-cons ul {
+  margin: 8px 0 0 0;
+  padding-left: 20px;
+  color: #57534E;
+}
+
+.pros-cons li {
+  margin-bottom: 4px;
+  line-height: 1.5;
+}
+
+/* Phone Mockup */
+.wovyn-phone-mockup {
+  max-width: 390px;
+  margin: 0 auto;
+  background: #FAFAF9;
+  border-radius: 36px;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 12px #1F2937,
+    0 20px 60px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+/* Phone Header */
+.wovyn-phone-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background: #FAFAF9;
+  border-bottom: 1px solid #E7E5E4;
+}
+
+.wovyn-back-btn {
+  font-size: 24px;
+  color: #A8A29E;
+  cursor: pointer;
+}
+
+.wovyn-header-dots {
+  font-size: 24px;
+  color: #A8A29E;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* Profile Content */
+.wovyn-profile-content {
+  padding: 24px 0;
+  background: #FAFAF9;
+  min-height: 600px;
+  max-height: 700px;
+  overflow-y: auto;
+}
+
+/* Profile Header */
+.wovyn-profile-header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 0 24px 24px 24px;
+}
+
+.wovyn-avatar-wrapper {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.wovyn-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FF9F89, #FCD34D);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Times New Roman', Georgia, serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 4px solid #FAFAF9;
+}
+
+.wovyn-status-dot {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #FAFAF9;
+}
+
+.wovyn-status-dot.urgent {
+  background: #FB7185;
+}
+
+.wovyn-status-dot.warning {
+  background: #FBBF24;
+}
+
+.wovyn-status-dot.good {
+  background: #34D399;
+}
+
+.wovyn-status-dot.neutral {
+  background: #D6D3D1;
+}
+
+.wovyn-profile-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.wovyn-profile-info h1 {
+  font-family: 'Times New Roman', Georgia, serif;
+  font-size: 30px;
+  font-weight: 600;
+  color: #292524;
+  margin: 0 0 4px 0;
+  line-height: 1.2;
+}
+
+.wovyn-last-contact {
+  font-family: 'Times New Roman', Georgia, serif;
+  font-size: 14px;
+  font-style: italic;
+  color: #A8A29E;
+  margin: 0;
+}
+
+/* Inline Tags (Option 2) */
+.wovyn-inline-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  margin-top: 12px;
+  font-size: 13px;
+  color: #78716C;
+}
+
+.wovyn-inline-tag {
+  white-space: nowrap;
+}
+
+.wovyn-inline-tag-separator {
+  color: #D6D3D1;
+}
+
+/* Subtle Badges (Option 4) */
+.wovyn-subtle-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  padding: 0 24px 16px 24px;
+  font-size: 13px;
+  color: #78716C;
+}
+
+.wovyn-badge {
+  white-space: nowrap;
+}
+
+.wovyn-badge-separator {
+  color: #D6D3D1;
+}
+
+/* Section Styling (matches FriendProfileView.swift) */
+.wovyn-section {
+  padding: 0 24px 24px 24px;
+}
+
+.wovyn-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.wovyn-section-header > span:first-child {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #A8A29E;
+}
+
+.wovyn-rhythm-value {
+  font-family: 'Times New Roman', Georgia, serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #A8A29E;
+}
+
+.wovyn-add-btn {
+  font-size: 16px;
+  color: #A8A29E;
+  cursor: pointer;
+}
+
+/* Connection Context Grid (Option 1) */
+.wovyn-context-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 16px;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #E7E5E4;
+}
+
+.wovyn-context-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.wovyn-context-item.full-width {
+  grid-column: 1 / -1;
+}
+
+.wovyn-context-label {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #A8A29E;
+}
+
+/* Tag Pills */
+.wovyn-tag-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: #292524;
+  color: white;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.wovyn-tag-emoji {
+  font-size: 16px;
+}
+
+.wovyn-tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Small Tags (for collapsible) */
+.wovyn-tag-small {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: #F5F5F4;
+  color: #292524;
+  border-radius: 16px;
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Collapsible Card (Option 3) */
+.wovyn-collapsible-card {
+  margin: 0 24px 24px 24px;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #E7E5E4;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.wovyn-collapsible-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+}
+
+.wovyn-collapsible-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #292524;
+}
+
+.wovyn-chevron {
+  color: #A8A29E;
+  font-size: 12px;
+  transition: transform 0.2s ease;
+}
+
+.wovyn-collapsible-content {
+  padding: 0 16px 16px 16px;
+  animation: slideDown 0.2s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.wovyn-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.wovyn-info-row.column {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.wovyn-info-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #A8A29E;
+}
+
+.wovyn-divider {
+  height: 1px;
+  background: #E7E5E4;
+  margin: 8px 0;
+}
+
+/* Slider (Connection Rhythm) */
+.wovyn-slider-container {
+  padding: 12px 0;
+}
+
+.wovyn-slider {
+  height: 4px;
+  background: linear-gradient(to right, #292524 50%, #E7E5E4 50%);
+  border-radius: 2px;
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.wovyn-slider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background: #292524;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.wovyn-slider-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  font-weight: 500;
+  color: #A8A29E;
+}
+
+/* Memory Knot Preview */
+.wovyn-knot-preview {
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+}
+
+.wovyn-knot-text {
+  font-family: 'Times New Roman', Georgia, serif;
+  font-size: 18px;
+  font-style: italic;
+  color: #57534E;
+  margin: 0 0 8px 0;
+  line-height: 1.4;
+}
+
+.wovyn-knot-date {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #A8A29E;
+}
+
+/* Recommendations Section */
+.wovyn-recommendations {
+  background: white;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.wovyn-recommendations h2 {
+  font-family: 'Times New Roman', Georgia, serif;
+  font-size: 2rem;
+  color: #292524;
+  margin-bottom: 32px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.wovyn-rec-section {
+  margin-bottom: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #E7E5E4;
+}
+
+.wovyn-rec-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.wovyn-rec-section h3 {
+  font-family: 'Times New Roman', Georgia, serif;
+  font-size: 1.5rem;
+  color: #292524;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.wovyn-rec-section p {
+  font-size: 1rem;
+  color: #57534E;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.wovyn-rec-section ul {
+  margin: 0;
+  padding-left: 24px;
+  color: #57534E;
+}
+
+.wovyn-rec-section li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.code-suggestion {
+  background: #FAFAF9;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 16px;
+}
+
+.code-suggestion h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #292524;
+  margin-bottom: 12px;
+}
+
+.code-suggestion ol {
+  margin: 0;
+  padding-left: 24px;
+  color: #57534E;
+}
+
+.code-suggestion li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.code-suggestion code {
+  background: #E7E5E4;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'SF Mono', Monaco, 'Courier New', monospace;
+  font-size: 0.875em;
+  color: #292524;
+}
+
+.code-suggestion pre {
+  background: #292524;
+  color: #34D399;
+  padding: 16px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: 'SF Mono', Monaco, 'Courier New', monospace;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-top: 12px;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .wovyn-mockups-grid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .wovyn-mockups-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wovyn-mockups-container {
+    padding: 32px 16px;
+  }
+
+  .wovyn-recommendations {
+    padding: 24px;
+  }
+}

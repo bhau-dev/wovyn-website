@@ -3,6 +3,9 @@ import { AnimatePresence } from 'framer-motion'
 import Home from './pages/Home'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import Terms from './pages/Terms'
+import FriendProfileMockups from './components/FriendProfileMockups'
+import WovynFriendProfileMockups from './components/WovynFriendProfileMockups'
+import WovynCompactMockups from './components/WovynCompactMockups'
 
 function App() {
   const location = useLocation()
@@ -13,6 +16,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms" element={<Terms />} />
+        <Route path="/mockups" element={<FriendProfileMockups />} />
+        <Route path="/wovyn-mockups" element={<WovynFriendProfileMockups />} />
+        <Route path="/compact-mockups" element={<WovynCompactMockups />} />
       </Routes>
     </AnimatePresence>
   )
